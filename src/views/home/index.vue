@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <router-view/>
+    <div id="nav">
+      <router-link to="/">首页</router-link> |
+      <router-link to="/about">问答</router-link> |
+      <router-link to="/activity">我的</router-link>
+    </div>
   </div>
 </template>
+
 <style>
 html,body{
   margin: 0;
