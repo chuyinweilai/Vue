@@ -3,7 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './utils/rem'
-
+import api from './api/index'
+Vue.prototype.$api = api
 new Vue({
   router,
   store,

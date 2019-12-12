@@ -2,10 +2,13 @@
 const baseSize = 100
 // 设置 rem 函数
 function setRem () {
-  // 当前页面宽度相对于 750 宽的缩放比例，可根据自己需要修改。
-  const scale = document.documentElement.clientWidth / 7.5
-  // 设置页面根节点字体大小
-  document.documentElement.style.fontSize = (baseSize * Math.min(scale, 1)) + 'px'
+  const html = document.documentElement;
+  const w_width = html.offsetWidth;
+  let def_font_size = "100px";
+  if(w_width <= 375){
+      def_font_size = w_width / 3.75+ 'px';
+  }
+  html.style.fontSize = def_font_size;
 }
 // 初始化
 setRem()
